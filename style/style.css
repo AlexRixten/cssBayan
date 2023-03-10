@@ -1,180 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+NKo&family=Rubik+Iso&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+NKo&family=Rubik+Iso&display=swap");
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-body, html {
-    font-family: 'Climate Crisis', cursive;
+body,
+html {
+  font-family: "Climate Crisis", cursive;
 }
-
 .container {
-    max-width: 71.25rem;
-    margin: 0 auto;
-    padding: 0.938rem;
+  max-width: 71.25rem;
+  margin: 0 auto;
+  padding: 0.938rem;
 }
-
 .accordion {
-    margin-top: 1.25rem;
+  margin-top: 1.25rem;
 }
-
 .accordion_item {
-    display: block;
-    margin-top: 2.5rem;
-    padding: 1rem;
-    border-top: 0.25rem solid #d2d2d2;
-    cursor: pointer;
+  display: block;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  border-top: 0.25rem solid #d2d2d2;
+  cursor: pointer;
 }
-
 .accordion_item .accordion_item__input:checked ~ * .accordion_description {
-    color: black;
+  color: black;
 }
-
 .accordion_top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .accordion_item__input {
-    display: none;
+  display: none;
 }
-
 .accordion_description {
-    color: blue;
+  color: blue;
 }
-
 .accordion_item__content {
-    height: 100%;
-    display: flex;
-    margin-top: 1rem;
-    border-top: 0;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  margin-top: 1rem;
+  border-top: 0;
+  align-items: center;
+  justify-content: center;
 }
-
 .accordion_item__img {
-    height: 0;
-    max-width: 300px;
-    object-fit: cover;
-    transition: all 1.3s;
+  height: 0;
+  max-width: 300px;
+  object-fit: cover;
+  transition: all 1.3s;
 }
-
 .accordion_btn {
-    border: none;
-    outline: none;
-    background: transparent;
-    transition: all .2s;
-    transform: rotate(45deg);
-    opacity: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: all 0.2s;
+  transform: rotate(45deg);
+  opacity: 0;
 }
-
 @media (min-width: 320px) {
-
-    .cssBayan_title {
-        font-size: 3em;
-    }
-
-    .accordion_description {
-        font-size: 1.5em;
-    }
+  .cssBayan_title {
+    font-size: 3em;
+  }
+  .accordion_description {
+    font-size: 1.5em;
+  }
 }
-
 @media (min-width: 575px) {
-
-    .cssBayan_title {
-        font-size: 5em;
-    }
-
-    .accordion_description {
-        font-size: 2.5em;
-    }
-
-    .accordion_item__input:checked ~ * .accordion_item__img,
-    .accordion_item:hover .accordion_item__img {
-        height: 400px;
-    }
-
-    .accordion_item__img {
-        max-width: 400px;
-    }
+  .cssBayan_title {
+    font-size: 5em;
+  }
+  .accordion_description {
+    font-size: 2.5em;
+  }
+  .accordion_item__input:checked ~ * .accordion_item__img,
+  .accordion_item:hover .accordion_item__img {
+    height: 400px;
+  }
+  .accordion_item__img {
+    max-width: 400px;
+  }
 }
-
 @media (min-width: 820px) {
-
-    .cssBayan_title {
-        font-size: 7em;
-    }
-
-    .accordion_btn {
-        font-size: 4em;
-    }
-
-    .accordion_description {
-        font-size: 3.5em;
-    }
-
-    .accordion_item__input:checked ~ * .accordion_item__img,
-    .accordion_item:hover .accordion_item__img {
-        height: 600px;
-    }
-
-    .accordion_item__img {
-        max-width: 600px;
-    }
-
-    .accordion_item:active {
-        opacity: 0.7;
-    }
-
-    .accordion_item:active .accordion_description,
-    .accordion_item:active .accordion_btn{
-        color: blue !important;
-    }
-
-    .accordion:hover .accordion_description {
-        color: black;
-    }
-
-    .accordion_item:hover .accordion_item__input:not(:checked) ~ * .accordion_btn,
-    .accordion:hover .accordion_item__input:not(:checked) ~ * .accordion_btn{
-        transform: rotate(0);
-        opacity: 1;
-    }
-
-    .accordion_item:hover .accordion_item__input:not(:checked) ~ * .accordion_btn,
-    .accordion_item:hover .accordion_item__input:checked ~ * .accordion_btn,
-    .accordion:hover .accordion_item__input:checked ~ * .accordion_btn{
-        transform: rotate(45deg);
-        opacity: 1;
-    }
+  .cssBayan_title {
+    font-size: 7em;
+  }
+  .accordion_btn {
+    font-size: 4em;
+  }
+  .accordion_description {
+    font-size: 3.5em;
+  }
+  .accordion_item__input:checked ~ * .accordion_item__img,
+  .accordion_item:hover .accordion_item__img {
+    height: 600px;
+  }
+  .accordion_item__img {
+    max-width: 600px;
+  }
+  .accordion_item:active {
+    opacity: 0.7;
+  }
+  .accordion_item:active .accordion_description,
+  .accordion_item:active .accordion_btn {
+    color: blue !important;
+  }
+  .accordion:hover .accordion_description {
+    color: black;
+  }
+  .accordion_item:hover .accordion_item__input:not(:checked) ~ * .accordion_btn,
+  .accordion:hover .accordion_item__input:not(:checked) ~ * .accordion_btn {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  .accordion_item:hover .accordion_item__input:not(:checked) ~ * .accordion_btn,
+  .accordion_item:hover .accordion_item__input:checked ~ * .accordion_btn,
+  .accordion:hover .accordion_item__input:checked ~ * .accordion_btn {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
 }
-
 @media (min-width: 1920px) {
-
-    .cssBayan_title {
-        font-size: 10em;
-    }
-
-    .accordion_description {
-        font-size: 5em;
-    }
-
-    .accordion_btn {
-        font-size: 7em;
-    }
-
-    .accordion_item__img {
-        max-width: 800px;
-    }
-
-    .accordion_item__input:checked ~ * .accordion_item__img,
-    .accordion_item:hover .accordion_item__img {
-        height: 800px;
-    }
-
+  .cssBayan_title {
+    font-size: 10em;
+  }
+  .accordion_description {
+    font-size: 5em;
+  }
+  .accordion_btn {
+    font-size: 7em;
+  }
+  .accordion_item__img {
+    max-width: 800px;
+  }
+  .accordion_item__input:checked ~ * .accordion_item__img,
+  .accordion_item:hover .accordion_item__img {
+    height: 800px;
+  }
 }
