@@ -12,7 +12,7 @@ body,
 html {
     font-family: "Climate Crisis", cursive;
 }
-// вспомогательный блок, который отвечает за центрирование всего контента на странице
+/* вспомогательный блок, который отвечает за центрирование всего контента на странице */
 .container {
     max-width: 71.25rem;
     margin: 0 auto;
@@ -66,6 +66,7 @@ html {
 }
 
 .accordion_btn {
+    display: block;
     border: none;
     outline: none;
     background: transparent;
@@ -74,7 +75,17 @@ html {
     opacity: 0;
 }
 
-// Это медиа запрос для разрешения устройств до 820px по ширине, здесь задаются размеры шрифтов для описания, заголовков, также задается размер изображения, логика hover эффекта тут уже не будет работать
+.accordion_item:active {
+    opacity: 0.7;
+}
+
+.accordion_item:active .accordion_description,
+.accordion_item:active .accordion_btn {
+    color: blue !important;
+}
+
+
+/* Это медиа запрос для разрешения устройств до 820px по ширине, здесь задаются размеры шрифтов для описания, заголовков, также задается размер изображения, логика hover эффекта тут уже не будет работать */
 @media (min-width: 321px) {
     .cssBayan_title {
         font-size: 3em;
@@ -88,6 +99,12 @@ html {
         font-size: 5em;
     }
 
+    .accordion_btn {
+        font-size: 2em;
+        opacity: 1;
+        transform: rotate(0);
+    }
+
     .accordion_description {
         font-size: 2.5em;
     }
@@ -96,12 +113,16 @@ html {
         height: 400px;
     }
 
+    .accordion_item__input:checked ~ * .accordion_btn{
+        transform: rotate(45deg);
+    }
+
     .accordion_item__img {
         max-width: 400px;
     }
 }
 
-// Это медиа запрос для разрешения устройств до 821px по ширине, здесь задаются размеры шрифтов для описания, заголовков, также задается размер изображения, и изменение высоты изображения при hover эффекте, здесь хранится основаная логика аккордиона
+/* Это медиа запрос для разрешения устройств до 821px по ширине, здесь задаются размеры шрифтов для описания, заголовков, также задается размер изображения, и изменение высоты изображения при hover эффекте, здесь хранится основаная логика аккордиона */
 @media (min-width: 821px) {
     .cssBayan_title {
         font-size: 7em;
@@ -124,15 +145,6 @@ html {
         max-width: 600px;
     }
 
-    .accordion_item:active {
-        opacity: 0.7;
-    }
-
-    .accordion_item:active .accordion_description,
-    .accordion_item:active .accordion_btn {
-        color: blue !important;
-    }
-
     .accordion:hover .accordion_description {
         color: black;
     }
@@ -151,7 +163,7 @@ html {
     }
 }
 
-// Это медиа запрос для разрешения устройств до 1921px по ширине, здесь задаются размеры шрифтов для описания, заголовков, также задается размер изображения, и изменение высоты изображения при hover эффекте
+ /* Это медиа запрос для разрешения устройств до 1921px по ширине, здесь задаются размеры шрифтов для описания, заголовков, также задается размер изображения, и изменение высоты изображения при hover эффекте */
 @media (min-width: 1921px) {
     .cssBayan_title {
         font-size: 10em;
