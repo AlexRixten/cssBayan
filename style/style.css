@@ -86,17 +86,13 @@ html {
 
 
 /* Это медиа запрос для разрешения устройств до 820px по ширине, здесь задаются размеры шрифтов для описания, заголовков, также задается размер изображения, логика hover эффекта тут уже не будет работать */
-@media (min-width: 321px) {
+@media (min-width: 320px) {
     .cssBayan_title {
-        font-size: 3em;
-    }
-
-    .accordion_description {
         font-size: 1.5em;
     }
 
-    .cssBayan_title {
-        font-size: 5em;
+    .accordion_description {
+        font-size: 1em;
     }
 
     .accordion_btn {
@@ -104,10 +100,6 @@ html {
         opacity: 1;
         transform: rotate(0);
         color: blue;
-    }
-
-    .accordion_description {
-        font-size: 2.5em;
     }
 
     .accordion_item__input:checked ~ * .accordion_item__img{
