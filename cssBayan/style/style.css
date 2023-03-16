@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+NKo&family=Rubik+Iso&display=swap");
 
-*,
-::before,
-::after {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -60,7 +58,7 @@ html {
 
 .accordion_item__img {
     height: 0;
-    max-width: 300px;
+    max-width: 100%;
     object-fit: cover;
     transition: all 1.3s;
 }
@@ -103,16 +101,12 @@ html {
     }
 
     .accordion_item__input:checked ~ * .accordion_item__img{
-        height: 300px;
+        height: 15em;
     }
 
     .accordion_item__input:checked ~ * .accordion_btn{
         transform: rotate(45deg);
         color: black;
-    }
-
-    .accordion_item__img {
-        max-width: 300px;
     }
 }
 
@@ -136,14 +130,11 @@ html {
 
     .accordion_item__input:checked ~ * .accordion_item__img,
     .accordion_item:hover .accordion_item__img {
-        height: 600px;
+        height: 30em;
     }
 
-    .accordion_item__img {
-        max-width: 600px;
-    }
-
-    .accordion:hover .accordion_description {
+    .accordion:hover .accordion_description,
+    .accordion:hover .accordion_btn {
         color: black;
     }
 
@@ -175,12 +166,8 @@ html {
         font-size: 7em;
     }
 
-    .accordion_item__img {
-        max-width: 800px;
-    }
-
     .accordion_item__input:checked ~ * .accordion_item__img,
     .accordion_item:hover .accordion_item__img {
-        height: 800px;
+        height: 40em;
     }
 }
